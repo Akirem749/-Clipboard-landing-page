@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+:root{
+   --Strong-Cyan: hsl(171, 66%, 44%);
+   --Light-Blue: hsl(233, 100%, 69%);
+   --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+   --Grayish-Blue: hsl(201, 11%, 66%);
+   --Font-size: 18px;
+}
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+header{
+    background-image: url(images/bg-header-desktop.png);
+    background-repeat: repeat-x;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 50px;
+}
+header img{
+    width: 70px;
+}
+h1,
+h2{
+    margin: 0;
+    margin-top: 20px;
+}
+header p,
+section:nth-of-type(1) > p,
+section:nth-of-type(2) p{
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: var(--Dark-Grayish-Blue);
+    max-width: 400px;
+    text-align: center;
+}
+button{
+  padding:10px 15px;
+  border-radius: 20px;
+  margin: 5px;
+  color: white;
+  border: none;
+  font-weight: 600;
+  transition: opacity .3s;
+}
+button:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+button:nth-of-type(1){
+    background-color: var(--Strong-Cyan);
+}
+button:nth-of-type(2){
+    background-color: var(--Light-Blue);
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 100px;
+    
+}
+
+/*section 1- Keep track of your snippets*/
+section:nth-of-type(1) img{
+    transform: scale(0.5, 0.5);
+    
+}
+
+section:nth-of-type(1) article{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+section:nth-of-type(1) article aside{
+    text-align: left;
+  display: grid;
+  gap: 20px;
+    
+}
+aside h3,
+aside p{
+margin: 0;
+}
+aside p{
+    font-size: 13px;
+    margin-top: 5px;
+    color: var(--Dark-Grayish-Blue);
+}
+/*section 2- Access Clipboard anywhere*/
+
+section:nth-of-type(2) img{
+    transform: scale(0.8, 0.8);
+}
+
+/*section 3- Supercharge your workflow*/
+section:nth-of-type(3){
+    margin-bottom: 80px;
+}
+section:nth-of-type(3) article:first-of-type{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    gap: 10px;
+}
+section:nth-of-type(3) p{
+    margin: 0;
+    color: var(--Dark-Grayish-Blue);
+    margin-top: 5px;
+
+}
+section:nth-of-type(3) h3{
+    margin-bottom: 0;
+    
+    
+
+}
+section:nth-of-type(3) article:nth-of-type(1) div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+section:nth-of-type(3) article:nth-of-type(2){
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-around;
+    width: 100%;
+}
+section:nth-of-type(3) article:nth-of-type(2) img{
+    transform: scale(.8, .8);
+}
+
+/*section 4-Clipboard for iOS and Mac OS*/
+section:nth-of-type(4) p{
+    margin: 0;
+    color: var(--Dark-Grayish-Blue);
+    margin-top: 5px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    text-align: center;
+
+}
+/* footer*/
+footer{
+    background-color: hsla(202, 11%, 66%, 0.158);
+    margin-top: 100px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 100px minmax(1fr, 500px) 100px 1fr ;
+    grid-template-areas: 
+    "col1 col2 col3 col4 col5 ";
+    align-items: center;
+    
+
+}
+footer img{
+    transform: scale(.4,.4);
+    
+}
+
+footer div:nth-of-type(1){
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    grid-area: col1;
+}
+footer div:nth-of-type(2){
+    grid-area: col3;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+}
+footer div:nth-of-type(2) a{
+    text-decoration: none;
+    color: var(--Dark-Grayish-Blue);
+}
+footer div:nth-of-type(2) a:hover{
+    color: var(--Strong-Cyan);
+}
+footer div:nth-of-type(3){
+    grid-area: col5;
+}
+footer div:nth-of-type(3) svg{
+    transform: scale(1);
+    margin: 10px;
+    fill:#4C545C;
+
+}
+footer div:nth-of-type(3) svg:hover{
+    fill: var(--Strong-Cyan);
+    cursor: pointer;
+}
+
+@media (max-width:850px) {
+    section:nth-of-type(1) article{
+    margin-bottom: 50px;
+    flex-direction: column;
+    }
+    section:nth-of-type(1) article aside{
+        text-align: center;
+        
+    }
+    section:nth-of-type(2) img{
+        transform: scale(0.5, 0.5);
+    }
+}
+@media (max-width:710px) {
+    section:nth-of-type(3) article:nth-of-type(2){
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    footer div:nth-of-type(3) svg{
+        transform: scale(.7);
+        margin: 5px;
+        fill:#4C545C;
+    
+    }
+    section:nth-of-type(4) p{
+        width: 400px;
+    }
+}
+@media (max-width:600px) {
+    footer div:nth-of-type(2){
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+    
+}
+
+@media (max-width:520px) {
+    h2,p{
+        text-align: center;
+    }
+    header{
+        background-image: url(images/bg-header-mobile.png);
+        background-repeat:repeat-x;
+    }
+    button{
+        display: block;
+        margin-bottom: 10px;
+    }
+    section{
+        padding: 0px 50px;
+    }
+    section:nth-of-type(2) img{
+        transform: scale(0.4, 0.4);
+    }
+    section:nth-of-type(1) img{
+        transform: scale(0.4, 0.4);
+        
+    }
+    section:nth-of-type(3) article:first-of-type{
+        display: grid;
+        grid-template-columns: auto;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        gap: 10px;
+    }
+    section:nth-of-type(3) article:nth-of-type(2){
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        
+    }
+    footer{
+        grid-template-columns: auto;
+        grid-template-areas: 
+    "col1"
+    "col2"
+    "col3"
+    "col4"
+    "col5";
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    }
+    footer div:nth-of-type(2){
+        grid-template-columns: auto;
+        gap: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    section:nth-of-type(4) p{
+        font-size: 13px;
+    }
+}
